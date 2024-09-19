@@ -1,0 +1,144 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70px; 
+    margin-right: 900px;
+    transform: translate(0,20px);
+}
+
+.logo h1 {
+    font-size: 25px; 
+    margin: 0;  
+    margin-left: 80px;
+    transform: translate(0,-20px);
+}
+
+/* Main heading styles */
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}   
+
+/* Info section styles */
+.info {
+    flex: 1; /* Allow flexibility */
+    min-width: 300px; /* Minimum width for responsiveness */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Margin for spacing */
+}
+
+.info h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.5;
+    transform: translate(3px,0);
+    text-align: center;
+}
+
+.service-logo {
+    width: 100px;
+    transform: translate(230px,80px);
+    display: block;
+    margin-bottom: 88px;
+}
+
+/* Form section styles */
+.form-section {
+    flex: 1; /* Allow flexibility */
+    min-width: 300px; /* Minimum width for responsiveness */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Margin for spacing */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styles */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input and textarea styles */
+input[type="text"],
+input[type="date"],
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Button styles */
+button {
+    padding: 10px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        margin: 10px;
+    }
+
+    .info,
+    .form-section {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Space between stacked elements */
+    }
+}

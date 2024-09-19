@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1e88e5;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Header */
+.header {
+  background-color: #e53935;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 80px;
+  margin-left: 20px;
+}
+
+.header h2 {
+  font-size: 24px;
+  margin-right: 70%;
+  transform: translate(0,9px);
+}
+
+/* Breadcrumbs Section */
+.breadcrumbs-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.title h1 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+.title p {
+  color: #777;
+  text-align: center;
+}
+
+.filter {
+  font-size: 14px;
+}
+
+.filter-link {
+  text-decoration: none;
+  color: #1e88e5;
+}
+
+/* Content Layout */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left: Image Section */
+.left-image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.left-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right: Motor List */
+.motor-list {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Kolom */
+  gap: 20px;
+}
+
+.motor-item {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.motor-item img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .left-image {
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .motor-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 Kolom pada layar lebih kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  .motor-list {
+      grid-template-columns: 1fr; /* 1 Kolom pada layar kecil */
+  }
+}

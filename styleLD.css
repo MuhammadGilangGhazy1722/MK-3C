@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #d50000;
+    color: white;
+    padding: 20px;
+   
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.logo {
+    width: 80px;
+    margin-right: 65px;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.services {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.services h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.service-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Wrap service icons on small screens */
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.service-item p {
+    margin-top: 10px;
+}
+
+.featured img {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 40px auto;
+}
+
+.products {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.products h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Make product items wrap on smaller screens */
+}
+
+.product-item {
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add margin to avoid overlap on smaller screens */
+}
+
+.product-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.contact-btn {
+    background-color: #00c853;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .service-icons {
+        gap: 15px; /* Reduce gap between service icons */
+    }
+
+    .product-item {
+        width: 150px; /* Make product items narrower on smaller screens */
+    }
+
+    .services h2, .products h2 {
+        font-size: 20px; /* Reduce font size for headings */
+    }
+
+    .contact-btn {
+        padding: 10px 20px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Stack product items vertically on very small screens */
+    }
+
+    .service-item img {
+        width: 40px;
+        height: 40px; /* Adjust icon size for smaller screens */
+    }
+
+    .contact-btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px 20px;
+    }
+}

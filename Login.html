@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Login.css">
+    <title>TUMPANG SARI MOTOR</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name">
+                <input type="username" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form onsubmit="return validateLogin()">
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your username and password</span>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <a href="#">Forget Your Password?</a>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="MK3.png" alt="logo" width="200" height="170">
+                    <h1>Selamat Datang</h1>
+                    <p>Untuk tetap terhubung dengan kami, silahkan masuk dengan akun anda</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Valid username and password
+            var validUsername = "user";
+            var validPassword = "password";
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to LD.html
+                window.location.href = "LD.html";
+                return false; // Prevent form submission
+            } else {
+                alert("Username or password is incorrect. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
